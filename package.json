@@ -1,0 +1,9 @@
+{
+  "name": "tdd-js",
+  "version": "0.0.1",
+  "description": "run tests on vm",
+  "author": "Javier Cervantes",
+  "devDependencies": {
+    "grunt-shell": "^1.1.2"
+  }
+}

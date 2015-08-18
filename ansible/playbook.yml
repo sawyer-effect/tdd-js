@@ -1,0 +1,32 @@
+---
+- hosts: all
+  sudo: yes
+
+  tasks:
+
+  - name: update the server
+    apt:
+      update_cache: yes
+
+  - name: install Node
+    apt:
+      name: nodejs
+      state: present
+
+  - name: install Node legacy
+    apt:
+      name: nodejs-legacy
+      state: present
+
+  - name: install npm
+    apt:
+      name: npm
+      state: present
+
+  - name: install
+    apt:
+      name: libfontconfig
+      state: present
+
+  - name: install dependencies
+    npm: path=/opt/software/app/runner
