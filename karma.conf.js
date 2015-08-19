@@ -2,14 +2,15 @@ module.exports = function(config) {
     config.set({
 
         // base path, that will be used to resolve files and exclude
-        basePath: '../source/',
+        basePath: '.',
 
         // frameworks to use
         frameworks: ['jasmine'],
 
         // list of files / patterns to load in the browser
         files: [
-            '**/*.js'
+            'counter.js',
+            'tests/**/*.js'
         ],
 
         // list of files to exclude
@@ -39,6 +40,6 @@ module.exports = function(config) {
 
         // Continuous Integration mode
         // if true, it capture browsers, run tests and exit
-        singleRun: false
+        singleRun: true
     });
 };

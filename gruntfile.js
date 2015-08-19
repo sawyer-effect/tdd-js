@@ -3,14 +3,13 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
-        shell: {
-          test: {
-            command: 'vagrant ssh -c "cd /opt/software/app/runner && ./node_modules/karma/bin/karma start"'
+        karma: {
+          unit: {
+            configFile: 'karma.conf.js'
           }
         }
     });
 
-    grunt.loadNpmTasks('grunt-shell');
-
-    grunt.registerTask('test', ['shell:test']);
+    grunt.loadNpmTasks('grunt-karma');
+    grunt.registerTask('test', ['karma']);
 };

@@ -1,9 +1,14 @@
 {
-  "name": "tdd-js",
+  "name": "karma-jasmine-phantom",
   "version": "0.0.1",
-  "description": "run tests on vm",
+  "description": "setup for tests for javascript",
+  "main": "counter.js",
   "author": "Javier Cervantes",
   "devDependencies": {
-    "grunt-shell": "^1.1.2"
+    "karma-jasmine": "~0.1.5",
+    "karma-phantomjs-launcher": "~0.1.2",
+    "karma": "~0.10.9",
+    "grunt-karma": "~0.6.2",
+    "grunt-cli": "~0.1.13"
   }
 }

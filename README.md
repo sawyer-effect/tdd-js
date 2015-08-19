@@ -13,5 +13,4 @@
 
 * Go to project dir: `cd tdd-js`
 * Execute command `vagrant up`
-* Install dependencies: `npm install`
-* Execute command: `grunt test`
+* To run tests: `vagrant provision`
