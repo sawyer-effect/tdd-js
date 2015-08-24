@@ -9,8 +9,8 @@ module.exports = function(config) {
 
         // list of files / patterns to load in the browser
         files: [
-            'counter.js',
-            'tests/**/*.js'
+            'app.js',
+            'test/**/*.js'
         ],
 
         // list of files to exclude

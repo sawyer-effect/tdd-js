@@ -23,10 +23,13 @@
       name: npm
       state: present
 
-  - name: install
+  - name: install libfontconfig
     apt:
       name: libfontconfig
       state: present
+
+  - name: install grunt
+    command: npm install -g grunt-cli
 
   - name: install dependencies
     npm: path=/opt/software/tdd-js
