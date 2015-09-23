@@ -13,4 +13,4 @@
 
 * Go to project dir: `cd tdd-js`
 * Execute command `vagrant up`
-* To run tests: `vagrant provision`
+* To run tests for now: `vagrant provision`
