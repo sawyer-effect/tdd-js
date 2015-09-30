@@ -15,9 +15,7 @@
 
 ## To run tests
 
-* Run `vagrant ssh`
-* Go to `cd /opt/software/tdd-js`
-* Execute test with `grunt test`
+* To run tests you can run the following commad : `vagrant ssh -c "grunt --gruntfile /opt/software/tdd-js/Gruntfile.js test"`
 
 ## Task to run in Jenkins
 
