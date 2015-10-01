@@ -64,7 +64,7 @@
 
   - name: Upload tomcat.conf
     copy:
-      src: ./tomcat-conf/tomcat.conf
+      src: ./templates/tomcat.conf
       dest: /usr/share/tomcat7/conf/
       owner: tomcat7
       group: tomcat7
