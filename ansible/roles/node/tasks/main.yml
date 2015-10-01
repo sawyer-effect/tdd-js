@@ -1,0 +1,27 @@
+---
+- name: update the server
+  apt:
+    update_cache: yes
+
+- name: install Node
+  apt:
+    name: nodejs
+    state: present
+
+- name: install Node legacy
+  apt:
+    name: nodejs-legacy
+    state: present
+
+- name: install npm
+  apt:
+    name: npm
+    state: present
+
+- name: install libfontconfig
+  apt:
+    name: libfontconfig
+    state: present
+
+- name: install grunt
+  command: npm install -g grunt-cli
