@@ -19,5 +19,10 @@
     group: tomcat7
   notify: restart tomcat
 
+- name: install jq
+  apt:
+    name: jq
+    state: present
+
 - debug:
     msg: "jenkins should be up and listening to http://<ip>:8080/jenkins"
