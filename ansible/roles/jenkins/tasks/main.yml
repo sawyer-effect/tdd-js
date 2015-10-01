@@ -1,7 +1,4 @@
 ---
-- name: ensure tomcat is stopped
-  service: name=tomcat7 state=stopped
-
 - name: download jenkins
   get_url:
     url: http://mirrors.jenkins-ci.org/war/1.631/jenkins.war
@@ -20,11 +17,7 @@
     dest: /usr/share/tomcat7/conf/
     owner: tomcat7
     group: tomcat7
-
-- name: start tomcat to pickup and install Jenkins
-  service:
-    name: tomcat7
-    state: started
+  notify: restart tomcat
 
 - debug:
     msg: "jenkins should be up and listening to http://<ip>:8080/jenkins"
