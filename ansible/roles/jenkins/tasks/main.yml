@@ -1,0 +1,30 @@
+---
+- name: ensure tomcat is stopped
+  service: name=tomcat7 state=stopped
+
+- name: download jenkins
+  get_url:
+    url: http://mirrors.jenkins-ci.org/war/1.631/jenkins.war
+    dest: /var/lib/tomcat7/webapps/jenkins.war
+    mode: 0644
+
+- name: Create the /var/lib/jenkins directory
+  file:
+    path: /var/lib/jenkins/
+    mode: 0777
+    state: directory
+
+- name: Upload tomcat.conf
+  copy:
+    src: tomcat.conf
+    dest: /usr/share/tomcat7/conf/
+    owner: tomcat7
+    group: tomcat7
+
+- name: start tomcat to pickup and install Jenkins
+  service:
+    name: tomcat7
+    state: started
+
+- debug:
+    msg: "jenkins should be up and listening to http://<ip>:8080/jenkins"
