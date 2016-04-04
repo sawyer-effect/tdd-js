@@ -5,10 +5,14 @@
   "main": "counter.js",
   "author": "Javier Cervantes",
   "devDependencies": {
-    "jasmine-core": "^2.3.4",
-    "karma-jasmine": "^0.3.6",
+    "grunt": "^0.4.5",
+    "grunt-cli": "*",
     "grunt-karma": "^0.12.0",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.13.9",
+    "karma-jasmine": "^0.3.6",
     "karma-phantomjs-launcher": "^0.2.1",
-    "karma": "^0.13.9"
+    "phantomjs": "^2.1",
+    "karma-coverage": "*"
   }
 }

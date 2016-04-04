@@ -17,8 +17,12 @@ module.exports = function(config) {
         exclude: [
         ],
 
+        preprocessors: {
+            'app.js': ['coverage']
+        },
+
         // test results reporter to use
-        reporters: ['progress'],
+        reporters: ['progress', 'coverage'],
 
         // web server port
         port: 9876,
@@ -40,6 +44,20 @@ module.exports = function(config) {
 
         // Continuous Integration mode
         // if true, it capture browsers, run tests and exit
-        singleRun: true
+        singleRun: true,
+
+        // optionally, configure the reporter
+        coverageReporter: {
+            type : 'html',
+            dir : 'target/coverage/',
+            check: {
+                global: {
+                    statements: 100,
+                    lines: 100,
+                    functions: 100,
+                    branches: 100
+                }
+            }
+        }
     });
 };
