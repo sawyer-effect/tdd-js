@@ -25,3 +25,6 @@
 
 - name: install grunt
   command: npm install -g grunt-cli
+
+- name: install gulp
+  command: npm install -g gulp-cli
