@@ -15,7 +15,17 @@
 
 ## To run tests
 
-* To run tests you can run the following commad : `vagrant ssh -c "grunt --gruntfile /opt/software/tdd-js/Gruntfile.js test"`
+To run tests you can run the following commads:
+
+### Grunt
+```
+vagrant ssh -c "grunt --gruntfile /opt/software/tdd-js/Gruntfile.js test"
+```
+
+### Gulp
+```
+vagrant ssh -c "gulp --gulpfile /opt/software/tdd-js/Gulpfile.js test"
+```
 
 ## Tasks to run in Jenkins
 
